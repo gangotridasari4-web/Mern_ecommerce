@@ -16,7 +16,12 @@ const userSchema=mongoose.Schema({
     mobile:{
         type:Number,
         required:true
+    },
+    role:{
+        type:String,
+        required:true,
+        default:"user"
     }
 },{timestamps:true})
 
-module.exports=mongoose.model("User",userSchema)
+module.exports=mongoose.model("user",userSchema)
